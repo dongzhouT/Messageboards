@@ -1,0 +1,121 @@
+form {
+	margin: 0 auto;
+}
+.box {
+	padding: 20px;
+}
+.mycontainer {
+	position: relative;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #285E8E;
+}
+.uname {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #5bc0de;
+	border: 1px solid #46b8da;
+	color: #fff;
+	margin: 10px;
+}
+.time {
+	display: inline-block;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: #5cb85c;
+	border: 1px solid #4cae4c;
+	color: #fff;
+	margin: 10px;
+	margin-left: 20px;
+}
+.content {
+	margin: 10px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 1px solid #46b8da;
+}
+.msgs {
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+	height: 500px;
+	overflow-y: scroll;
+	border: 1px solid #101010;
+}
+.mg-top-20 {
+	margin-top: 20px;
+}
+.content-close {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 10px;
+	right: 10px;
+	background-color: #285E8E;
+	color: #5bc0de;
+	font-size: 18px;
+	text-align: center;
+	line-height: 20px;
+	cursor: pointer;
+}
+.content-close:hover {
+	color: #FFFFFF;
+}
+body {
+	background-color: #eee;
+}
+.coverdiv {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(34, 34, 34, 0.5);
+	z-index: 1040;
+	display: none;
+}
+.signup-div {
+	display: none;
+	position: absolute;
+	padding: 20px 80px;
+	background-color: #FFFFFF;
+	z-index: 1050;
+	border-radius: 10px;
+}
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.psw1 {
+	border-radius: 0;
+}
+.psw2 {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
