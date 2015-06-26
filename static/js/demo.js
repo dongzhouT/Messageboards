@@ -8,10 +8,9 @@
 	var mtop = document.getElementById("msgs").scrollHeight;
 	//$(".msgs").scrollTop(mtop);
 	$(".dropmsg").click(function() {
-		if (!confirm("确定要删除这条留言？")) {
+		if (!confirm("确定要删除这条留言？(游客不可以删除留言！)")) {
 			return false;
 		}
-
 	});
 	$("#signup").click(function() {
 		$("#signup-id").show();

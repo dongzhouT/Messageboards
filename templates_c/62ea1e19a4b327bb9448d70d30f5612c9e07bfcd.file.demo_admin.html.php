@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-26 11:35:19
-         compiled from ".\view\demo.html" */ ?>
-<?php /*%%SmartyHeaderCode:3130654abeb2b241b25-45746472%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-26 11:29:39
+         compiled from ".\view\demo_admin.html" */ ?>
+<?php /*%%SmartyHeaderCode:17836558cc723c86391-96782616%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'def2fa5c681dd503951a5b144b077a62112d4166' => 
+    '62ea1e19a4b327bb9448d70d30f5612c9e07bfcd' => 
     array (
-      0 => '.\\view\\demo.html',
-      1 => 1435289711,
+      0 => '.\\view\\demo_admin.html',
+      1 => 1420971312,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3130654abeb2b241b25-45746472',
+  'nocache_hash' => '17836558cc723c86391-96782616',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_54abeb2b2ce183_67347080',
   'variables' => 
   array (
     'status' => 0,
@@ -25,8 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'msg' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_558cc723dd1858_13852937',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54abeb2b2ce183_67347080')) {function content_54abeb2b2ce183_67347080($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_558cc723dd1858_13852937')) {function content_558cc723dd1858_13852937($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -149,8 +149,9 @@ $_smarty_tpl->tpl_vars['msg']->_loop = true;
 					<br>
 					<pre class="content"><?php echo $_smarty_tpl->tpl_vars['msg']->value["content"];?>
 </pre>
-					<a class="dropmsg" >
-						<div class="content-close bd-r-100 display-none" >×</div>
+					<a class="dropmsg" href="index.php?c=demo&a=delmsg&id=<?php echo $_smarty_tpl->tpl_vars['msg']->value['id'];?>
+">
+						<div class="content-close bd-r-100 display-none">×</div>
 					</a>
 				</div>
 				<?php } ?>

@@ -1,32 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-26 11:35:19
-         compiled from ".\view\demo.html" */ ?>
-<?php /*%%SmartyHeaderCode:3130654abeb2b241b25-45746472%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    'def2fa5c681dd503951a5b144b077a62112d4166' => 
-    array (
-      0 => '.\\view\\demo.html',
-      1 => 1435289711,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '3130654abeb2b241b25-45746472',
-  'function' => 
-  array (
-  ),
-  'version' => 'Smarty-3.1.21-dev',
-  'unifunc' => 'content_54abeb2b2ce183_67347080',
-  'variables' => 
-  array (
-    'status' => 0,
-    'login_flag' => 0,
-    'msgs' => 0,
-    'msg' => 0,
-  ),
-  'has_nocache_code' => false,
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54abeb2b2ce183_67347080')) {function content_54abeb2b2ce183_67347080($_smarty_tpl) {?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 	<head>
@@ -37,24 +9,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="./static/css/common.css" />
 		<link rel="stylesheet" type="text/css" href="./static/css/demostyle.css" />
-		<?php echo '<script'; ?>
- src="./static/js/jquery.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- src="./static/js/ajaxupload.3.5.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- src="./static/js/uploadimg.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- src="./static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- src="./static/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
-		<?php echo '<script'; ?>
- src="./static/js/demo.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
->
+		<script src="./static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./static/js/ajaxupload.3.5.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./static/js/uploadimg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./static/bootstrap/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./static/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./static/js/demo.js" type="text/javascript" charset="utf-8"></script>
 		<style>
 			body {
 				padding-top: 50px;
@@ -94,16 +54,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<a class="navbar-brand" href="#">Project name</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
-					<?php if (($_smarty_tpl->tpl_vars['status']->value=="yes")) {?>
+					{if ($status=="yes")}
 					<span class="label label-success">
-						<?php echo $_smarty_tpl->tpl_vars['login_flag']->value;?>
-
-					</span> <?php } else {
-if (($_smarty_tpl->tpl_vars['status']->value=="no")) {?>
+						{$login_flag}
+					</span> {else}{if ($status=="no")}
 					<span class="label label-warning">
-						<?php echo $_smarty_tpl->tpl_vars['login_flag']->value;?>
-
-					</span><?php }?>
+						{$login_flag}
+					</span>{/if}
 					<form class="navbar-form navbar-right" role="form" action="index.php?c=demo&a=signin" method="post">
 						<div class="form-group">
 							<input type="text" id="username" name="username" placeholder="Email" class="form-control">
@@ -114,7 +71,7 @@ if (($_smarty_tpl->tpl_vars['status']->value=="no")) {?>
 						<button type="submit" class="btn btn-success">Sign in</button>
 						<a class="" href="http://www.baidu.com" id="signup">Sign Up</a>
 					</form>
-					<?php }?>
+					{/if}
 				</div>
 				<!--/.navbar-collapse -->
 			</div>
@@ -129,31 +86,19 @@ if (($_smarty_tpl->tpl_vars['status']->value=="no")) {?>
 			</center>
 			<div class="mg-top-20"></div>
 			<div class="msgs" id="msgs">
-				<?php  $_smarty_tpl->tpl_vars['msg'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['msg']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['msgs']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['msg']->key => $_smarty_tpl->tpl_vars['msg']->value) {
-$_smarty_tpl->tpl_vars['msg']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['msg']->key;
-?>
+				{foreach from=$msgs item=msg key=k}
 				<div class="mycontainer">
-					<img src="<?php echo $_smarty_tpl->tpl_vars['msg']->value['guest_portrait'];?>
-" alt="" class="guest-portrait" title=<?php echo $_smarty_tpl->tpl_vars['msg']->value["uname"];?>
- />
-					<span class="uname"><?php echo $_smarty_tpl->tpl_vars['msg']->value["uname"];?>
-</span>
-					<img <?php if (($_smarty_tpl->tpl_vars['msg']->value['sex'])==1) {?>src="./static/pic/sex1.jpg"<?php } else { ?>src="./static/pic/sex2.jpg"<?php }?> alt="" class="usex" title=<?php echo $_smarty_tpl->tpl_vars['msg']->value["uname"];?>
- />
-					<span class="time"><?php echo date("Y-m-d H:i:s",$_smarty_tpl->tpl_vars['msg']->value['ontime']);?>
-</span>
+					<img src="{$msg['guest_portrait']}" alt="" class="guest-portrait" title={$msg[ "uname"]} />
+					<span class="uname">{$msg["uname"]}</span>
+					<img {if ($msg['sex'])==1}src="./static/pic/sex1.jpg"{else}src="./static/pic/sex2.jpg"{/if} alt="" class="usex" title={$msg[ "uname"]} />
+					<span class="time">{date("Y-m-d H:i:s",$msg['ontime'])}</span>
 					<br>
-					<pre class="content"><?php echo $_smarty_tpl->tpl_vars['msg']->value["content"];?>
-</pre>
-					<a class="dropmsg" >
-						<div class="content-close bd-r-100 display-none" >×</div>
+					<pre class="content">{$msg["content"]}</pre>
+					<a class="dropmsg" href="index.php?c=demo&a=delmsg&id={$msg['id']}">
+						<div class="content-close bd-r-100 display-none">×</div>
 					</a>
 				</div>
-				<?php } ?>
+				{/foreach}
 			</div>
 		</div>
 		<div class="box col-xs-4">
@@ -193,4 +138,4 @@ $_smarty_tpl->tpl_vars['msg']->_loop = true;
 		</div>
 	</body>
 
-</html><?php }} ?>
+</html>

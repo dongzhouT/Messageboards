@@ -122,8 +122,8 @@ class Model {
 		$w = $this -> _getSelectInfo($data);
 		$sql = "";
 		$sql = "delete from " . $this -> table . " where " . $w;
-		//		echo $sql."@@<br>";
-		//		exit;
+	//			echo $sql."@@<br>";
+	//			exit;
 		mysql_query($sql);
 		return;
 
@@ -184,7 +184,7 @@ class Model {
 	 */
 	function _getSelectInfo($data) {
 		$return = " 1=1 ";
-		if (is_array($var)) {
+		if (is_array($data)) {
 			foreach ($data as $key => $v) {
 				$return .= " and " . $key . " = " . "'" . $v . "'";
 			}
@@ -216,14 +216,15 @@ class Model {
 
 }
 
-//////测试
+////测试
 //$hehe = new model('ejm_witkey_space_o2o');
-////$data = array('username' => 'ss', );
+//$data = array('username' => 'ss', );
 //$where = array('uid' => '5602', 'sn' => "0w1poU");
+//$where = array('id' => '5602');
 //$data = array('address' => '5532');
 //$order = array('uid');
-////$hehe->modify($where, $data);
-//$hehe -> get_info($where);
+//$hehe->del($where);
+////$hehe -> get_info($where);
 //echo "<br>";
-//$hehe -> get_info($where, $order);
+////$hehe -> get_info($where, $order);
 //exit('hehe');

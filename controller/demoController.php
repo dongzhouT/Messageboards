@@ -22,7 +22,12 @@ class DemoController extends BaseApp {
 		//echo "what happened";
 		//echo "</pre>";
 		if (!IS_POST) {
-			$this -> display('demo.html');
+			if($_GET['admin']=='taodzh'){
+				$this -> display('demo_admin.html');
+			}else{
+				$this -> display('demo.html');
+			}
+			
 			return;
 		} else {
 			//var_dump($_POST);
