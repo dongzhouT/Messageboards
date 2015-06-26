@@ -4,15 +4,7 @@ $con = mysql_connect("10.4.26.93","upGuJgeTI1fbC","pcJOAtWWmZ8V7") //填写mysql
    mysql_select_db("dbfa7585ec8554c6387a1447303bc970d") //数据库名  
    or die("Could not select database!"); 
    mysql_query("set names 'utf8'");
-if (mysql_query("CREATE DATABASE msgboard",$con))
-  {
-  echo "Database created";
-  }
-else
-  {
-  echo "Error creating database: " . mysql_error();
-  }
-  mysql_select_db("msgboard", $con);
+
 $sql = "CREATE TABLE  message  (
    id  int(11) NOT NULL AUTO_INCREMENT,
    uname  varchar(50) CHARACTER SET utf8 DEFAULT NULL,
