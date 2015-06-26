@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-26 11:35:19
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-06-26 22:40:34
          compiled from ".\view\demo.html" */ ?>
 <?php /*%%SmartyHeaderCode:3130654abeb2b241b25-45746472%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'def2fa5c681dd503951a5b144b077a62112d4166' => 
     array (
       0 => '.\\view\\demo.html',
-      1 => 1435289711,
+      1 => 1435329631,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_54abeb2b2ce183_67347080',
   'variables' => 
   array (
-    'status' => 0,
-    'login_flag' => 0,
     'msgs' => 0,
     'msg' => 0,
   ),
@@ -91,31 +89,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Project name</a>
+					<a class="navbar-brand" href="#">MessageBoard</a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<?php if (($_smarty_tpl->tpl_vars['status']->value=="yes")) {?>
-					<span class="label label-success">
-						<?php echo $_smarty_tpl->tpl_vars['login_flag']->value;?>
-
-					</span> <?php } else {
-if (($_smarty_tpl->tpl_vars['status']->value=="no")) {?>
-					<span class="label label-warning">
-						<?php echo $_smarty_tpl->tpl_vars['login_flag']->value;?>
-
-					</span><?php }?>
-					<form class="navbar-form navbar-right" role="form" action="index.php?c=demo&a=signin" method="post">
-						<div class="form-group">
-							<input type="text" id="username" name="username" placeholder="Email" class="form-control">
-						</div>
-						<div class="form-group">
-							<input type="password" id="password" name="password" placeholder="Password" class="form-control">
-						</div>
-						<button type="submit" class="btn btn-success">Sign in</button>
-						<a class="" href="http://www.baidu.com" id="signup">Sign Up</a>
-					</form>
-					<?php }?>
-				</div>
+				
 				<!--/.navbar-collapse -->
 			</div>
 		</nav>
