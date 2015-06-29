@@ -51,7 +51,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">MessageBoard</a>
+					<a class="navbar-brand" href="#">Project name</a>
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					{if ($status=="yes")}
@@ -61,6 +61,16 @@
 					<span class="label label-warning">
 						{$login_flag}
 					</span>{/if}
+					<form class="navbar-form navbar-right" role="form" action="index.php?c=demo&a=signin" method="post">
+						<div class="form-group">
+							<input type="text" id="username" name="username" placeholder="Email" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" id="password" name="password" placeholder="Password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-success">Sign in</button>
+						<a class="" href="http://www.baidu.com" id="signup">Sign Up</a>
+					</form>
 					{/if}
 				</div>
 				<!--/.navbar-collapse -->
@@ -68,10 +78,11 @@
 		</nav>
 		<div class="fl col-xs-8">
 			<center>
-				<h1>Talk What You Want</h1><a href="index.php">去留言</a>
+				<h1>留言板</h1><a href="index.php">去留言</a>
 			</center>
 			<center>
-				<p class="green">上传头像，并预览(已完成)</p>
+				<p class="green">下一步 上传头像，并预览(已完成)</p>
+				<p>下一步 登陆注册，加载更多</p>
 				<div id="loading"></div>
 			</center>
 			<div class="mg-top-20"></div>
